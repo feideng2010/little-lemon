@@ -1,0 +1,387 @@
+{
+	"info": {
+		"_postman_id": "3acd2c04-b930-449c-9733-c2b6988c5b73",
+		"name": "LittleLemon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24528757",
+		"_collection_link": "https://bold-crescent-51675-1.postman.co/workspace/Team-Workspace~2ad7d8be-fdc6-4472-892c-b9bae56d64f4/collection/24528757-3acd2c04-b930-449c-9733-c2b6988c5b73?action=share&creator=24528757&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "UserEndPoint",
+			"item": [
+				{
+					"name": "CreateUserTest",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token caee32184ff194dce7222fe99c321ae7aa7f3d14",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Joseph",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "Joseph@little.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Jose@123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserTokenLogin",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Jack",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Jack@123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/auth/token/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"token",
+								"login"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "Lili",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "lili@123",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserTokenLoginAlterLink",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Joseph",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Jose@123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api-token-auth/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api-token-auth",
+								""
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CurrentUserTest",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 8a9d394d711722f33e4890269a6a0f9eeac18a3e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/auth/users/me",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"users",
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MenuEndPoint",
+			"item": [
+				{
+					"name": "MenuItemNoAuthList",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/menu/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"menu",
+								""
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "main",
+									"disabled": true
+								},
+								{
+									"key": "order_by",
+									"value": "price",
+									"disabled": true
+								},
+								{
+									"key": "featured",
+									"value": "True",
+									"disabled": true
+								},
+								{
+									"key": "menuItem",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MenuItemSingleNoAuth",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "menuItem",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/menu/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"menu",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BookingEndPoint",
+			"item": [
+				{
+					"name": "BookingTableList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 4ccc5bb172d967ff69ca78c24519a6811309a819",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/restaurant/booking/tables",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"restaurant",
+								"booking",
+								"tables"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateBooking",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 4ccc5bb172d967ff69ca78c24519a6811309a819",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Sam",
+									"type": "text"
+								},
+								{
+									"key": "no_of_guests",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "booking_date",
+									"value": "2023-08-13",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/restaurant/booking/tables/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"restaurant",
+								"booking",
+								"tables",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
